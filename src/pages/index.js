@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
+import Head from "next/head";
 import ProfileImage from "@/components/ProfileImage/ProfileImage";
 import PersonalInfo from "@/components/PersonalInfo/PersonalInfo";
 import ContactIcons from "@/components/ContactIcons/ContactIcons";
@@ -14,79 +15,126 @@ import WorkExperience from "@/components/WorkExperience/WorkExperience";
 import ImageGallery from "@/components/ImageGallery/ImageGallery";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 import QRCodeComponent from "@/components/QrCodeComponent/QrCodeComponent";
-import Services from "@/components/Services/Services";
+import Services from "@/components/Servicios/Services";
+import WhatsAppButton from "@/components/WhatsAppButton/WhatsAppButton";
 
 export default function testpage() {
+  const service = [
+    {
+      service: "Diagnóstico y Reparación de Laptops",
+      description:
+        " Diagnóstico y reparación de laptops, computadoras de escritorio y dispositivos electrónicos.  Reparación de componentes electrónicos. ",
+      imageUrl: "/images/servicio2.png",
+    },
+    {
+      service: "Mantenimiento Preventivo y Correctivo de Laptops",
+      description:
+        "Mantenimiento preventivo y correctivo de laptops, computadoras de escritorio y dispositivos electrónicos. Atención a hogares y empresas ",
+      imageUrl: "/images/servicio4.png",
+    },
+
+    {
+      service: "Reparación Electrónica de Computadoras",
+      description:
+        "Reparación de componentes electrónicos de computadoras, laptops y dispositivos electrónicos. Reballing de chips gráficos y procesadores. ",
+      imageUrl: "/images/servicio3.png",
+    },
+    {
+      service: "Mantenimiento y Reparación de Impresoras",
+      description:
+        "Mantenimiento y reparación de impresoras, multifuncionales y dispositivos de impresión. Atención a hogares y empresas.",
+      imageUrl: "/images/servicio1.png",
+    },
+  ];
+
   return (
-    <Layout>
-      <Container fluid className={styles.mainContainer}>
-        <Row className={styles.mainRow}>
+    <>
+      <Head>
+        <title>Carlos Cano</title>
+        <meta name="description" content="Carlos Cano Digital Card" />
+        <link rel="icon" href="/icons/logo.ico" />
 
-          {/* Columna con imagen de perfil, informacón general, redes sociales e imagen informativa */}
-          <Col xs={10} className={styles.infoCol}>
-            <section id="profile">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <ProfileImage
-                  src="/images/profile.jpg"
-                  alt="Carlos Cano O."
-                  size={250}
+        {/* Open Graph */}
+        <meta property="og:url" content="https://carloscano.businessdigicards.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Business digital card Carlos Cano" />
+        <meta property="og:description" content="Tarjeta de presentación digital" />
+        <meta
+          property="og:image"
+          content="https://carloscano.businessdigicards.com/images/shared_image.png"
+        />
+      </Head>
+      <Layout>
+        <Container fluid className={styles.mainContainer}>
+          <Row className={styles.mainRow}>
+            {/* Columna con imagen de perfil, informacón general, redes sociales e imagen informativa */}
+            <Col xs={10} className={styles.infoCol}>
+              <section id="profile">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <ProfileImage src="/images/profile.jpg" alt="Carlos Cano O." size={250} />
+                </motion.div>
+              </section>
+              <section>
+                <PersonalInfo
+                  name="Carlos Cano"
+                  title="Técnico en Informática y Electrónica de Laptops"
+                  description="Especialista en informática y electrónica de laptops. Ofrece servicios expertos en reparación y mantenimiento combinando técnica avanzada con atención personalizada."
                 />
-              </motion.div>
-            </section>
-            <section>
-              <PersonalInfo
-                name="Carlos Cano"
-                title="Técnico en Informática y Electrónica de Laptops"
-                description="Carlos Cano, especialista en informática y electrónica de laptops, ofrece servicios expertos en reparación y mantenimiento, combinando técnica avanzada con atención personalizada."
-              />
-            </section>
-            <section className={styles.socialMediaSection}>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <SocialMediaIcons
-                  facebook="https://www.facebook.com/Canordinfsolutions"
-                  instagram="https://www.instagram.com/canordinformatic/"
-                  //linkedin="https://www.linkedin.com/in/carlos-ivan-veintimilla-tinoco-msc-md-facs-12364973/"
-                  tiktok="https://www.tiktok.com/@canordinf"
-                  //twitter="https://twitter.com/CarlosIvanVein1"
+              </section>
+              <section className={styles.socialMediaSection}>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <SocialMediaIcons
+                    facebook="https://www.facebook.com/Canordinfsolutions"
+                    instagram="https://www.instagram.com/canordinformatic/"
+                    //linkedin="https://www.linkedin.com/in/carlos-ivan-veintimilla-tinoco-msc-md-facs-12364973/"
+                    tiktok="https://www.tiktok.com/@canordinf"
+                    //twitter="https://twitter.com/CarlosIvanVein1"
+                  />
+                  <div className={styles.whatsappContactSection}>
+                  <WhatsAppButton
+                    phone="+593985794253"
+                    message="Hola, me gustaría saber más sobre tus servicios"
+                    stylesButton={styles.whatsappContactButton}
+                  />
+                </div>
+                </motion.div>
+              </section>
+              <section className={styles.imageSection}>
+                <Image
+                  src="/images/empresa.jpg"
+                  alt="Médico con los brazos cruzados"
+                  width={1024}
+                  height={768}
+                  layout="responsive"
+                  className={styles.backgroundImage}
                 />
-              </motion.div>
-            </section>
-            <section className={styles.imageSection}>
-              <Image
-                src="/images/capacitacion_2.jpg"
-                alt="Médico con los brazos cruzados"
-                width={500}
-                height={300}
-                layout="responsive"
-                className={styles.backgroundImage}
-              />
-            </section>
-          </Col>
-          {/* Columna con información de contacto */}
-          <Col xs={2} className={styles.infoCol2}>
-            <section>
-              <ContactIcons
-                phone="+593985794253"
-                email="canordinfsolutions@outlook.com"
-                whatsapp="+593985794253"
-                telegram="+593985794253"
-                location={["Canord informatic Solutions"]}
-              />
-            </section>
-          </Col>
-        </Row>
+              </section>
+            </Col>
+            {/* Columna con información de contacto */}
+            <Col xs={2} className={styles.infoCol2}>
+              <section>
+                <ContactIcons
+                  phone="+593985794253"
+                  email="canordinfsolutions@outlook.com"
+                  whatsapp="+593985794253"
+                  telegram="+593985794253"
+                  location={["Canord informatic Solutions"]}
+                />
+              </section>
+            </Col>
+          </Row>
 
-        {/* Componente de educación y certificaciones */}
+          {/* Componente de educación y certificaciones */}
 
-        <Row>
+          {/* <Row>
           <Col className={styles.educationSection}>
             <section id="education">
               <div className={styles.educationTitle}>
@@ -115,11 +163,11 @@ export default function testpage() {
               </motion.div>
             </section>
           </Col>
-        </Row>
+        </Row> */}
 
-        {/* Componente de experiencia laboral */}
+          {/* Componente de experiencia laboral */}
 
-        <Row>
+          {/* <Row>
           <Col className={styles.workExperience}>
             <section id="experience">
               <WorkExperience
@@ -140,122 +188,118 @@ export default function testpage() {
               />
             </section>
           </Col>
-        </Row>
+        </Row> */}
 
-        {/* Componente de Servicios */}
-        <Row>
-          <Col className={styles.services}>
-            <Services
-              services={[
-                {
-                  service: "Diagnóstico y Reparación de Laptops",
-                  role: "Técnico en Electrónica",
-                  description:
-                    "Servicio experto en el diagnóstico y reparación de laptops, abordando desde problemas de hardware hasta cuestiones de software. Utiliza herramientas de diagnóstico avanzadas para identificar rápidamente la raíz del problema y proporciona soluciones efectivas para extender la vida útil de los dispositivos.",
-                },
-                {
-                  service: "Mantenimiento Preventivo de Sistemas",
-                  role: "Especialista en Soporte Técnico",
-                  description:
-                    "Con un enfoque proactivo, se realiza mantenimiento preventivo para sistemas informáticos, asegurando su óptimo funcionamiento. Este servicio incluye actualizaciones de software, limpieza de hardware y optimización del sistema, previniendo fallos y mejorando el rendimiento general.",
-                },
-                {
-                  service: "Consultoría y Asesoramiento en Tecnología",
-                  role: " Asesor Tecnológico",
-                  description:
-                    "Como asesor tecnológico, se proporciona una consultoría especializada para la selección y actualización de equipos informáticos. Ayuda a sus clientes a tomar decisiones informadas sobre la compra de nuevos dispositivos o la mejora de los existentes, basándose en sus necesidades específicas y presupuesto.",
-                },
-                {
-                  service: "Servicios de Reparación y Modificación Electrónica",
-                  role: "Experto en Electrónica",
-                  description:
-                    "Carlos Cano se especializa en servicios de reparación y modificación electrónica, abordando desde circuitos básicos hasta componentes avanzados en laptops y otros dispositivos. Su habilidad para diagnosticar y reparar fallas electrónicas complejas, junto con su capacidad para realizar modificaciones personalizadas, lo convierte en un recurso invaluable para clientes que buscan soluciones electrónicas a medida.",
-                },
-              ]}
-            />
-          </Col>
-        </Row>
+           {/* Componente de servicios y/o especialidades */}
 
-        {/* Componente de galería de imágenes */}
-
-        <Row>
-          <Col className={styles.imageGallery}>
-            <ImageGallery
-              images={[
-                {
-                  thumbnail: "/images/mantenimiento.jpg",
-                  full: "/images/mantenimiento.jpg",
-                  description: "Mantenimiento de laptops",
-                  alt: "Mantenimiento de laptops",
-                },
-                {
-                  thumbnail: "/images/reparacion_electronica.jpg",
-                  full: "/images/reparacion_electronica.jpg",
-                  description: "Reparación electrónica",
-                  alt: "Reparación electrónica",
-                },
-                {
-                  thumbnail: "/images/electronica_1.png",
-                  full: "/images/electronica_1.png",
-                  description: "Reparación de componentes electrónicos",
-                  alt: "Reparación de componentes electrónicos",
-                },
-                {
-                  thumbnail: "/images/capacitacion_1.jpg",
-                  full: "/images/capacitacion_1.jpg",
-                  description: "Capacitación en reparación de laptops",
-                  alt: "Capacitación en reparación de laptops",
-                },
-              ]}
-            />
-          </Col>
-        </Row>
-
-        {/* Componente de información de pago */}
-
-        <Row>
-          <Col className={styles.paymentSection}>
-            <section id="payment" className={styles.paymentInfo}>
-              <div className={styles.paymentTitle}>
-                <h2>Información de Pago</h2>
-                <span>Haz clic en el logo para acceder a los datos de la cuenta</span>
-              </div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <div className={styles.bankInfo}>
-                  <PaymentInfo
-                    bankName="Banco Pichincha"
-                    accountNumber="2204346829"
-                    identification="123456789"
-                    email="canordinfsolutions@outlook.com"
-                    bankLogo="/images/banco_pichincha.png"
-                  />
+           <Row>
+            <Col className={styles.servicesSection}>
+              <section id="education">
+                <div className={styles.servicesText}>
+                  <h2 className={styles.servicesTitle}>Servicios</h2>
+                  <span className={styles.servicesInstructions}>
+                    Haz clic en el item para ver la información
+                  </span>
                 </div>
-              </motion.div>
-            </section>
-          </Col>
-        </Row>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <div className={styles.servicesInfo}>
+                    <Services services={service} />
+                  </div>
+                </motion.div>
+              </section>
+            </Col>
+          </Row>
 
-        {/* Componente de video player */}
+          {/* Componente de galería de imágenes */}
 
-        <Row>
-          <Col className={styles.videoPlayer}>
-            <VideoPlayer videoUrl="/video/reparacion_electronica.mp4" />
-          </Col>
-        </Row>
+          <Row>
+            <Col className={styles.imageGallery}>
+              
+                <div className={styles.galleryTitle}>
+                  <h2 className={styles.galleryTitulo}>Especialidades</h2>
+                  <span className={styles.gallerySlogan}>Especialista en Electrónica y Soporte Técnico</span>
+                </div>
+              <ImageGallery
+                images={[
+                  {
+                    thumbnail: "/images/mantenimiento.jpg",
+                    full: "/images/mantenimiento.jpg",
+                    description: "Mantenimiento de laptops",
+                    alt: "Mantenimiento de laptops",
+                  },
+                  {
+                    thumbnail: "/images/reparacion_electronica.jpg",
+                    full: "/images/reparacion_electronica.jpg",
+                    description: "Reparación electrónica",
+                    alt: "Reparación electrónica",
+                  },
+                  {
+                    thumbnail: "/images/electronica_1.png",
+                    full: "/images/electronica_1.png",
+                    description: "Reparación de componentes electrónicos",
+                    alt: "Reparación de componentes electrónicos",
+                  },
+                  {
+                    thumbnail: "/images/capacitacion_1.jpg",
+                    full: "/images/capacitacion_1.jpg",
+                    description: "Capacitación en reparación de laptops",
+                    alt: "Capacitación en reparación de laptops",
+                  },
+                ]}
+              />
+            </Col>
+          </Row>
 
-        {/* Componente de QR Code */}
-        <Row>
-          <Col className={styles.qrCode}>
-            <section id="qrCode">
-              <QRCodeComponent qrCodeImageUrl="/images/qrcode-cc.png" altText="QR Code" />
-            </section>
-          </Col>
-        </Row>
-      </Container>
-    </Layout>
+          {/* Componente de información de pago */}
+
+          <Row>
+            <Col className={styles.paymentSection}>
+              <section id="payment" className={styles.paymentInfo}>
+                <div className={styles.paymentTitle}>
+                  <h2 className={styles.paymentTitulo}>Información de Pago</h2>
+                  <span className={styles.paymentInstructions}>Haz clic en el logo para acceder a los datos de la cuenta</span>
+                </div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <div className={styles.bankInfo}>
+                    <PaymentInfo
+                      bankName="Banco Pichincha"
+                      accountNumber="2204346829"
+                      identification="123456789"
+                      email="canordinfsolutions@outlook.com"
+                      bankLogo="/images/banco_pichincha.png"
+                    />
+                  </div>
+                </motion.div>
+              </section>
+            </Col>
+          </Row>
+
+          {/* Componente de video player */}
+
+          <Row>
+            <Col className={styles.videoPlayer}>
+              <VideoPlayer videoUrl="/video/reparacion_electronica.mp4" />
+            </Col>
+          </Row>
+
+          {/* Componente de QR Code */}
+          <Row>
+            <Col className={styles.qrCode}>
+              <section id="qrCode">
+                <QRCodeComponent qrCodeImageUrl="/images/qrcode-cc.png" altText="QR Code" />
+              </section>
+            </Col>
+          </Row>
+        </Container>
+      </Layout>
+    </>
   );
 }

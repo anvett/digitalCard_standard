@@ -1,5 +1,7 @@
 @import "../styles/variables.scss";
 
+
+
 .mainContainer {
  
   min-height: calc(100vh - 190px); 
@@ -32,13 +34,80 @@
   align-items: stretch;
 }
 
+
+
+  .socialMediaTitle {
+    font-family: $font-primary;
+    font-size: 1.8rem;
+    color: $light-color;
+    text-align: center;
+    margin-bottom: $spacing-4;
+  }
+
+  .socialMediaInstructions {
+    font-family: $font-primary;
+    font-size: 1rem;
+    color: $light-color;
+    text-align: center;
+    margin-bottom: $spacing-4;
+  }
+
+  .socialMediaButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-4;
+    width: 100%;
+    height: auto;
+  }
+
+  .whatsappContactSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    .whatsappContactTitle {
+      font-family: $font-primary;
+      font-size: 1.5rem;
+      color: $light-color;
+      text-align: center;
+      margin-bottom: $spacing-4;
+    }
+
+    .whatsappContactInstructions {
+      font-family: $font-primary;
+      font-size: 1rem;
+      color: $light-color;
+      text-align: center;
+      margin-bottom: $spacing-4;
+    }
+
+    .whatsappContactButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: $spacing-4;
+      width: 100%;
+      height: auto;
+    }
+  
+  }
+
+.whatsappContactButton{
+  background-color: $primary-color !important;
+  color: $light-color !important;
+  
+}
+
 .imageSection {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
   height: auto;
   overflow: hidden;
+  padding-top: 2rem;
    
 
   .backgroundImage {
@@ -52,52 +121,97 @@
   
 }
 
-.educationSection{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+// .educationSection{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   padding: $spacing-4;
+//   width: 100%;
+//   height: auto;
+//   background-color: $primary-color;
+
+//   .educationTitle {
+//     font-family: $font-primary;
+//     font-size: 0.8rem;
+//     color: $light-color;
+//     text-align: center;
+//     margin-bottom: $spacing-4;
+//   }
+// }
+
+//---------------------------------
+//Services and specialities section
+//---------------------------------
+
+.servicesSection{
   padding: $spacing-4;
   width: 100%;
   height: auto;
-  background-color: $primary-color;
+  //background-color: $primary-color;
+  background-image: url("/images/background_2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 2rem;
 
-  .educationTitle {
-    font-family: $font-primary;
-    font-size: 0.8rem;
-    color: $light-color;
+  .servicesText{
+    margin-bottom: $spacing-4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;}
+    color: $primary-color;
+
+  .servicesTitle {
+    font-family: $primary-font;
+    font-size: 1.8rem;
+    color: $primary-color;
     text-align: center;
     margin-bottom: $spacing-4;
   }
+
+  .servicesInstructions{
+    color: $primary-color;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+
+
 }
 
-
-
-.workExperience{
-  background-color: $light-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: $spacing-4;
-  width: 100%;
-  height: auto;
- 
-}
-
-.services{
-  background-color: $primary-color;
-  width: 100%;
-  height: auto;
-  padding: $spacing-2;
-}
 
 .imageGallery{
   justify-content: center;
-  padding: $spacing-1;
+  padding: $spacing-4;
   width: 100%;
   height: auto;
   background-color: $primary-color;
+  
+  padding-bottom: 2rem;
+
+
+  .galleryTitle {
+    
+    text-align: center;
+    margin-bottom: $spacing-4;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .galleryTitulo {
+      font-family: $primary-font;
+      font-size: 1.8rem;
+      color: $light-color;
+      text-align: center;
+      margin-bottom: $spacing-4;
+    }
+
+    .gallerySlogan{
+      color: $light-color;
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
 
 }
 
@@ -109,7 +223,10 @@
   padding: $spacing-4;
   width: 100%;
   height: auto;
-  background-color: $light-color;
+  //background-color: $light-color;
+  background-image: url("/images/background_2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
 
@@ -123,12 +240,24 @@
   height: auto;
 
   .paymentTitle {
-    font-family: $font-primary;
-    font-size: 0.8rem;
-    color: $primary-color;
+    
     text-align: center;
     margin-bottom: $spacing-4;
+
+    .paymentTitulo{
+      font-family: $primary-font;
+      font-size: 1.8rem;
+      color: $primary-color;
+      text-align: center;
+      margin-bottom: $spacing-4;
+    }
+    .paymentInstructions{
+      color: $primary-color;
+      text-align: center;
+      font-size: 1rem;
+    }
   }
+
 
   .bankInfo {
     display: flex;

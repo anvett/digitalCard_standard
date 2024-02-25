@@ -5,6 +5,7 @@
 .socialIcon {
     
     transition: transform 0.3s ease, opacity 0.3s ease;
+    
   
     &:hover {
       transform: scale(1.1); 
@@ -18,6 +19,7 @@
     align-items: center;
     //padding-top: $spacing-5;
     gap: $spacing-3;
+    padding-bottom: 3rem;
 
 
 }

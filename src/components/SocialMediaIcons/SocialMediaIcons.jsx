@@ -5,7 +5,7 @@ import styles from "./SocialMediaIcons.module.scss";
 const SocialMediaIcon = ({ href, src, alt }) => {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
-      <Image src={src} alt={alt} width={40} height={40} />
+      <Image src={src} alt={alt} width={50} height={50} />
     </a>
   );
 };
@@ -27,7 +27,7 @@ const SocialMediaIcons = ({
       {facebook && (
         <SocialMediaIcon
           href={facebook}
-          src="/icons/facebook_ac.png"
+          src="/icons/facebook_bs.png"
           alt="Facebook"
         />
       )}
@@ -41,7 +41,7 @@ const SocialMediaIcons = ({
       {instagram && (
         <SocialMediaIcon
           href={instagram}
-          src="/icons/instagram_ac.png"
+          src="/icons/instagram_bs.png"
           alt="Instagram"
         />
       )}
@@ -81,7 +81,7 @@ const SocialMediaIcons = ({
       )}
 
       {tiktok && (
-        <SocialMediaIcon href={tiktok} src="/icons/tiktok_ac.png" alt="TikTok" />
+        <SocialMediaIcon href={tiktok} src="/icons/tiktok_bs.png" alt="TikTok" />
       )}
     </Container>
   );

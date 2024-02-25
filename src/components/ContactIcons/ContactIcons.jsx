@@ -31,21 +31,21 @@ const ContactIcons = ({ title, phone, email, whatsapp, telegram, location }) => 
           {phone && (
             <ContactIcon
               href={`tel:${phone}`}
-              src="/icons/call_ac.png"
+              src="/icons/call_bs.png"
               alt="Phone"
             />
           )}
           {email && (
             <ContactIcon
               href={`mailto:${email}`}
-              src="/icons/email_ac.png"
+              src="/icons/email_bs.png"
               alt="Email"
             />
           )}
           {whatsapp && (
             <ContactIcon
               href={`https://wa.me/${whatsapp}`}
-              src="/icons/whatsapp_ac.png"
+              src="/icons/whatsapp_bs.png"
               alt="WhatsApp"
               
             />
@@ -53,14 +53,14 @@ const ContactIcons = ({ title, phone, email, whatsapp, telegram, location }) => 
           {telegram && (
             <ContactIcon
               href={`https://t.me/${telegram}`}
-              src="/icons/telegram_ac.png"
+              src="/icons/telegram_bs.png"
               alt="Telegram"
             />
           )}
           {location && (
             <ContactIcon
               href={`https://maps.google.com/?q=${location}`}
-              src="/icons/ubicacion_ac.png"
+              src="/icons/location_bs.png"
               alt="Location"
             />
           )}

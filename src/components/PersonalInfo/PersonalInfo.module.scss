@@ -6,9 +6,10 @@
   }
   
   .name {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
     color: $primary-color;
+    font-family: $primary-font;
     
   }
   
@@ -16,12 +17,12 @@
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: $primary-color;
-    
+    font-family: $primary-font;
   }
   
   .description {
     font-size: 1rem;
-    color: $dark-color;
-    
+    color: $primary-color;
+    font-family: $primary-font;
   }
   

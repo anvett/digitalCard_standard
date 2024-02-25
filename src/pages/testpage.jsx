@@ -14,7 +14,7 @@ import WorkExperience from "@/components/WorkExperience/WorkExperience";
 import ImageGallery from "@/components/ImageGallery/ImageGallery";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 import QRCodeComponent from "@/components/QrCodeComponent/QrCodeComponent";
-import Services from "@/components/Services/Services";
+import Services from "@/components/Servicios/Services";
 
 export default function testpage() {
   return (

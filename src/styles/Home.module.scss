@@ -73,24 +73,27 @@
 
 
 
-.workExperience{
-  background-color: $light-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: $spacing-4;
-  width: 100%;
-  height: auto;
- 
-}
 
-.services{
-  background-color: $primary-color;
-  width: 100%;
-  height: auto;
-  padding: $spacing-2;
-}
+
+
+// .workExperience{
+//   background-color: $light-color;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   padding: $spacing-4;
+//   width: 100%;
+//   height: auto;
+ 
+// }
+
+// .services{
+//   background-color: $primary-color;
+//   width: 100%;
+//   height: auto;
+//   padding: $spacing-2;
+// }
 
 .imageGallery{
   justify-content: center;

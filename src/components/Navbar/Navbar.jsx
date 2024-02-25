@@ -24,7 +24,7 @@ const CustomNavbar = () => {
           </Link>
 
           <Link to="education" smooth={true} duration={500} className={styles.navLink}>
-            Educación
+            Servicios
           </Link>
 
           <Link to="payment" smooth={true} duration={500} className={styles.navLink}>
