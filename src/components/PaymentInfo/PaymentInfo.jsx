@@ -26,7 +26,7 @@ const PaymentInfo = ({ bankName, accountNumber, identification, email, bankLogo 
     <>
       <div onClick={handleShow} style={{ cursor: 'pointer' }}>
        
-        <Image className={styles.bankLogo} src={bankLogo} alt={bankName} width={80} height={80} />
+        <Image className={styles.bankLogo} src={bankLogo} alt={bankName} width={100} height={100} />
       </div>
 
       {/* Modal para mostrar detalles de pago */}

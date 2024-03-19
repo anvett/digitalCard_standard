@@ -75,14 +75,14 @@ export default function testpage() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1 }}
                 >
-                  <ProfileImage src="/images/profile.jpg" alt="Carlos Cano O." size={250} />
+                  <ProfileImage src="/images/logo.jpg" alt="Carlos Cano O." size={250} />
                 </motion.div>
               </section>
               <section>
                 <PersonalInfo
-                  name="Carlos Cano"
-                  title="Técnico en Informática y Electrónica de Laptops"
-                  description="Especialista en informática y electrónica de laptops. Ofrece servicios expertos en reparación y mantenimiento combinando técnica avanzada con atención personalizada."
+                  name="CANORD INFORMATIC SOLUTIONS"
+                  title="Técnicos en Electrónica de Laptops"
+                  description="Especialistas en electrónica de laptops. Ofrecemos servicios expertos en reparación y mantenimiento combinando técnica avanzada con atención personalizada."
                 />
               </section>
               <section className={styles.socialMediaSection}>
@@ -274,7 +274,7 @@ export default function testpage() {
                       accountNumber="2204346829"
                       identification="123456789"
                       email="canordinfsolutions@outlook.com"
-                      bankLogo="/images/banco_pichincha.png"
+                      bankLogo="/images/banco_pichincha.jpg"
                     />
                   </div>
                 </motion.div>
